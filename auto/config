@@ -1,0 +1,21 @@
+#!/bin/sh
+
+lb config noauto \
+	--clean \
+	--ignore-system-defaults \
+	--mode debian \
+	--debian-installer live \
+	--linux-packages "linux-image linux-headers" \
+	--source false \
+	--archive-areas 'main contrib non-free' \
+	--backports true \
+	--security true \
+	--updates true \
+	--source false \
+	--debian-installer live \
+	--debian-installer-gui false \
+	--memtest memtest86+ \
+	--win32-loader true \
+	--firmware-binary true \
+	--firmware-chroot true \
+"${@}"
