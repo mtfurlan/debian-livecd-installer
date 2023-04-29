@@ -1,6 +1,9 @@
 #!/bin/sh
 
 lb config noauto \
+	--apt-recommends true \
+	--apt-indices false \
+	--architectures amd64 \
 	--clean \
 	--ignore-system-defaults \
 	--mode debian \
@@ -18,4 +21,9 @@ lb config noauto \
 	--win32-loader true \
 	--firmware-binary true \
 	--firmware-chroot true \
-"${@}"
+	--iso-publisher mtf \
+	--binary-images iso-hybrid \
+	--binary-filesystem ext4 \
+	--uefi-secure-boot enable \
+	--bootappend-live 'boot=live components' \
+	"${@}"

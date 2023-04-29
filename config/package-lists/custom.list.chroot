@@ -1,1 +1,15 @@
 gparted
+firmware-iwlwifi
+task-mate-desktop
+aptitude
+vim
+tmux
+
+debian-installer-launcher
+live-manual
+live-tools
+memtest86+
+
+task-english
+gstreamer1.0-vaapi
+i965-va-driver
